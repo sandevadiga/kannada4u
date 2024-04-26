@@ -9,31 +9,31 @@ const SecondNavBar = () => {
         <div style={{ width: '10px' }}></div>
         <div style={{ width: '10px' }}></div>
         <div style={{ width: '10px' }}></div>
-          <button className="px-2 py-1 md:px-4 md:py-2 dark:bg-gray-700 dark:text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
+        <button className="px-2 py-1 md:px-4 md:py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
             <Link href="/Top10">
               Top10
             </Link>
           </button>
 
-          <button className="px-2 py-1 md:px-4 md:py-2 dark:bg-gray-700 dark:text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
+          <button className="px-2 py-1 md:px-4 md:py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
             <Link href="/events">
               Events / Functions
             </Link>
           </button>
 
-          <button className="px-2 py-1 md:px-4 md:py-2 dark:bg-gray-700 dark:text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
+          <button className="px-2 py-1 md:px-4 md:py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
             <Link href="/biodata">
               BioData
             </Link>
           </button>
 
-          <button className="px-2 py-1 md:px-4 md:py-2 dark:bg-gray-700 dark:text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
+          <button className="px-2 py-1 md:px-4 md:py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
             <Link href="/jobs">
               Local Jobs
             </Link>
           </button>
 
-          <button className="px-2 py-1 md:px-4 md:py-2 dark:bg-gray-700 dark:text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
+          <button className="px-2 py-1 md:px-4 md:py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-400 text-sm md:text-base">
             <Link href="/travel">
               Travel Explore
             </Link>
