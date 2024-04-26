@@ -39,9 +39,11 @@ const RootLayout = ({ children }) => {
         {/* Add other metadata here */}
       </Head>
       <body>
-        <div className="m-3 mb-1">
+        <div>
           <Navbar  />
-          {children}
+          <div className="m-2">
+          {children}.
+          </div>
         </div>
         <Footer/>
       </body>
