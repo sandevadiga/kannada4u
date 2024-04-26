@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { newsData } from '../data/NewsData';
+import { newsData } from '../../../data/NewsData';
 
 const ArticlePage = () => {
+
   const { id } = 5; // Access the article ID from router.query
   const [article, setArticle] = useState(newsData[5]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -56,3 +57,5 @@ const ArticlePage = () => {
 };
 
 export default ArticlePage;
+
+

@@ -2,12 +2,31 @@
 
 import React from "react";
 import Head from "next/head";
+import Footer from './components/Footer'
 import Navbar from "./components/navBar";
 import "./globals.css"; 
 
 export const metadata = {
-  title: "kannada4u.com",
-  description: "Karantaka's fastest news website",
+  title: {
+    template: '%s | Kannada4u News',
+    default: 'Kannada4U.com',
+  },
+   keywords: [
+    'udupi',
+    'ujire',
+    'kannada news',
+    'local news ',
+    'hubbali',
+    'hassan',
+    'Karwarwa',
+    'Karawali',
+    'gokarna',
+    'mysore',
+    'kannada top10',
+    'shivamogga',
+    'belagavi'
+  ],
+  description: "Karantaka's fastest news website ",
 };
 
 
@@ -20,10 +39,11 @@ const RootLayout = ({ children }) => {
         {/* Add other metadata here */}
       </Head>
       <body>
-        <div>
-          <Navbar />
+        <div className="m-3 mb-1">
+          <Navbar  />
           {children}
         </div>
+        <Footer/>
       </body>
     </html>
   );

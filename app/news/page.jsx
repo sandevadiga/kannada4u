@@ -1,4 +1,4 @@
-import { newsData } from './data/NewsData';
+import { newsData ,allData } from '../data/NewsData';
 import Link from 'next/link'; // Import Link from Next.js
 
 const HomePage = () => {
@@ -39,7 +39,8 @@ const HomePage = () => {
             <div key={index} className="bg-white dark:bg-gray-700 p-4 rounded shadow-md">
               <Link
                 href={{
-                  pathname: `/news/${article.district}/id=${article.id}/`,
+                  pathname: `/news/id=${article.id}`,
+                  // pathname: `/news/`,
                   query: { id: index + 1, headline: article.headlines.split(' ').slice(0, 4).join('-') }
                 }}
                 passHref
@@ -59,7 +60,7 @@ const HomePage = () => {
                   <p className="text-gray-500 dark:text-gray-400">District: {article.district}</p>
                   <p className="text-gray-500 dark:text-gray-400">Author: {article.author}</p>
                   <p className="text-gray-500 dark:text-gray-400">Views: {article.views}</p>
-
+                
               </Link>
             </div>
           ))}

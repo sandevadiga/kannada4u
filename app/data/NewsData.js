@@ -309,7 +309,7 @@ export const newsData = [
     },
     {
        id: 29,
-        district: "Vijayapura",
+      district: "Vijayapura",
       photos: ["https://via.placeholder.com/300"],
       article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi ac eros commodo eleifend. Vivamus vitae libero sit amet ipsum finibus aliquet. Nulla facilisi. Integer ultricies mi vitae libero rutrum viverra.",
       headlines: "Local Events",
@@ -330,3 +330,53 @@ export const newsData = [
       date: "28-04-2024"
     }
   ];
+
+
+
+
+ export const  allData = [
+    {
+       id: 1,
+        district: "Bagalkot",
+      photos: [],
+      article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi ac eros commodo eleifend. Vivamus vitae libero sit amet ipsum finibus aliquet. Nulla facilisi. Integer ultricies mi vitae libero rutrum viverra.",
+      headlines: "Lorem Ipsum",
+      author: "John Doe",
+      views: 256,
+      category: "politics",
+      date: "10-01-2024"
+    },
+    {
+       id: 2,
+        district: "Ballari",
+      photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
+      article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi ac eros commodo eleifend. Vivamus vitae libero sit amet ipsum finibus aliquet. Nulla facilisi. Integer ultricies mi vitae libero rutrum viverra.",
+      headlines: "Breaking News",
+      author: "Jane Smith",
+      views: 432,
+      category: "sports",
+      date: "12-01-2024"
+    },
+    {
+       id: 3,
+        district: "Belagavi",
+      photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
+      article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi ac eros commodo eleifend. Vivamus vitae libero sit amet ipsum finibus aliquet. Nulla facilisi. Integer ultricies mi vitae libero rutrum viverra.",
+      headlines: "Important Announcement",
+      author: "Michael Brown",
+      views: 789,
+      category: "health",
+      date: "15-01-2024"
+    },
+    {
+       id: 4,
+        district: "Bengaluru Rural",
+      photos: [],
+      article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi ac eros commodo eleifend. Vivamus vitae libero sit amet ipsum finibus aliquet. Nulla facilisi. Integer ultricies mi vitae libero rutrum viverra.",
+      headlines: "Local Events",
+      author: "Sarah Johnson",
+      views: 105,
+      category: "entertainment",
+      date: "17-01-2024"
+    },
+ ]

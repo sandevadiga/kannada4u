@@ -1,4 +1,4 @@
-import { newsData } from './data/NewsData';
+import { newsData } from '../../data/NewsData';
 import Link from 'next/link'; // Import Link from Next.js
 
 const HomePage = () => {
@@ -59,7 +59,7 @@ const HomePage = () => {
                   <p className="text-gray-500 dark:text-gray-400">District: {article.district}</p>
                   <p className="text-gray-500 dark:text-gray-400">Author: {article.author}</p>
                   <p className="text-gray-500 dark:text-gray-400">Views: {article.views}</p>
-
+                
               </Link>
             </div>
           ))}
