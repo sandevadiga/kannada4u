@@ -1,6 +1,4 @@
 
-
-import React from 'react';
 import top10Data from '../data/top10Data';
 
 export default function Home() {

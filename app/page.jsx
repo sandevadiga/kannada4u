@@ -5,7 +5,7 @@ import React from 'react';
 
 
 const getdata = async () => {
-  const response = await fetch('http://localhost:3000/api/news');
+  const response = await fetch('/api/news');
   const data = await response.json();
   // console.log(data)clear
   return data;

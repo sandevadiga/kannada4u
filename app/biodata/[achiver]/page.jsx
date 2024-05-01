@@ -1,5 +1,4 @@
-import React from 'react'
-import next from 'next';
+
 
 function page() {
   return (
