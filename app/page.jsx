@@ -1,25 +1,25 @@
 
-// import { newsData } from './data/NewsData';  
+import { newsData } from './data/NewsData';  
 import Link from 'next/link'; // Import Link from Next.js
 import React from 'react';
 
 
-const getdata = async () => {
-  const response = await fetch('http://kannada4u.com/api/news');
-  const data = await response.json();
-  // console.log(data)clear
-  return data;
-};
+// const getdata = async () => {
+//   const response = await fetch('https://kannada4u.com/api/news');
+//   const data = await response.json();
+//   console.log(data);
+//   return data;
+// };
 
 
 const HomePage =  async () => {
 
-const newsDatas = await  getdata();
+// const newsDatas = await  getdata();
 
   
 // console.log(newsDatas);
 
-  const sortedNews = newsDatas.sort((a, b) => b.views - a.views);
+  const sortedNews = newsData.sort((a, b) => b.views - a.views);
 
   const categoryColors = {
     'breaking news': 'bg-red-500 text-white',
