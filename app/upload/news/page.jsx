@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react';
 import { getFirestore, collection, addDoc } from 'firebase/firestore'; // Import Firestore functions
-import { firebaseApp } from '../../../firebase' // Import your Firebase app
+import { firebaseApp } from '../../config/firebase'
 
 import { newsData } from '../../data/NewsData';
 
