@@ -1,6 +1,7 @@
 import db from '../../config/firebaseAdmin'; // adjust the path as needed
 
 
+
 export const GET = async (req,res) => {
   if (req.method === 'GET') {
     let news = [];
