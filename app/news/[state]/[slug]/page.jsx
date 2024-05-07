@@ -1,33 +1,41 @@
-"use client"
+const getdata = async (docID, distric) => {
+  const response = await fetch(`http://localhost:3000/api/news/${distric}/${docID}`, {
+    method: 'GET',
+    headers: {
+      BlogID : docID
+    }},  { cache: 'no-store' });
+  const data = await response.json();
+  return data;
+};
 
-import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { newsData } from '../../../data/NewsData';
+const getSuggestedArticles = async (state) => {
+  const response = await fetch(`http://localhost:3000/api/news/${state}`, {
+    method: 'GET',
+  }, { cache: 'no-store' });
+  const data = await response.json();
+  return data;
+};
 
-const ArticlePage = () => {
+const timestampToDate = (timestamp) => {
+  return timestamp;
+};
+const ArticlePage = async ({ params }) => {
+  const docID = getID(params.slug);
+  const distric = params.state;
 
-  const { id } = 5; // Access the article ID from router.query
-  const [article, setArticle] = useState(newsData[5]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  function getID(slug) {
+    let decodedStr = decodeURIComponent(slug);
+    let parts = decodedStr.split(/&|=/);
+    return parts[2];
+  }
 
-  useEffect(() => {
-    // Fetch the article based on the ID from the query parameters
-    if (id) {
-      const articleId = parseInt(id);
-      const foundArticle = newsData.find(item => item.id === articleId);
-      setArticle(foundArticle);
-    }
-  }, [id]); // Trigger the effect whenever the ID changes
+  const article = await getdata(docID, distric);
+  article.date = timestampToDate(article.date);
 
-  useEffect(() => {
-    // Automatically transition to the next image after 3 seconds
-    const interval = setInterval(() => {
-      setCurrentImageIndex(prevIndex => (prevIndex + 1) % article.photos.length);
-    }, 3000);
+  const suggestedArticles = await getSuggestedArticles(distric);
 
-    // Cleanup function to clear the interval when the component unmounts or when article changes
-    return () => clearInterval(interval);
-  }, [article.photos.length]); // Trigger the effect whenever the length of photos array changes
+  console.log(article)
+  console.log(suggestedArticles)
 
   return (
     <div className="container mx-auto px-4 py-8 dark:bg-gray-800 dark:text-white">
@@ -35,18 +43,27 @@ const ArticlePage = () => {
         <>
           <h1 className="text-2xl font-bold mb-4">{article.headlines}</h1>
           <div className="flex items-center mb-4">
-            <span className="text-gray-500 mr-2">{article.date}</span>
             <span className="text-gray-500">|</span>
             <span className="text-gray-500 ml-2">{article.category}</span>
           </div>
           <div className="relative h-48">
-            <img src={article.photos[currentImageIndex]} alt={article.headlines} className="w-full h-full object-cover rounded" />
           </div>
           <p className="mt-8">{article.article}</p>
           <div className="flex items-center mt-8">
             <p className="text-gray-500">Author: {article.author}</p>
             <span className="mx-4 text-gray-500">|</span>
             <p className="text-gray-500">Views: {article.views}</p>
+          </div>
+          <h2 className="text-xl font-bold mt-8">Suggested Articles</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {suggestedArticles.map((suggestedArticle, index) => (
+              <div key={index} className="rounded overflow-hidden shadow-lg p-4 bg-white dark:bg-gray-800">
+                <img className="w-full h-64 object-cover" src={suggestedArticle.image} alt={suggestedArticle.headlines} />
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">{suggestedArticle.headlines}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </>
       ) : (
@@ -57,5 +74,3 @@ const ArticlePage = () => {
 };
 
 export default ArticlePage;
-
-

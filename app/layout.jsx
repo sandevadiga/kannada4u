@@ -42,7 +42,7 @@ const RootLayout = ({ children }) => {
         <div>
           <Navbar  />
           <div className="m-2">
-          {children}.
+          {children}
           </div>
         </div>
         <Footer/>

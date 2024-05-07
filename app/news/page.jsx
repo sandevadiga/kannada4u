@@ -1,8 +1,12 @@
 import { newsData ,allData } from '../data/NewsData';
 import Link from 'next/link'; // Import Link from Next.js
 
+
+
 const HomePage = () => {
   const sortedNews = newsData.sort((a, b) => b.views - a.views);
+
+  console.log('this newspage')
 
   const categoryColors = {
     'breaking news': 'bg-red-500 text-white',

@@ -1,6 +1,6 @@
 export const newsData = [
     {
-       id: 1,
+       
         district: "ಬಗಲಕೋಟೆ",
         districtEn: "udupi",
       photos: [],
@@ -29,7 +29,7 @@ export const newsData = [
       date: "10-01-2024"
     },
     {
-       id: 2,
+       
         district: "ಬೆಳಗಾವಿ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -58,7 +58,7 @@ export const newsData = [
       date: "12-01-2024"
     },
     {
-       id: 3,
+       
         district: "ಬೆಲಗಾಮ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -87,7 +87,7 @@ export const newsData = [
       date: "15-01-2024"
     },
     {
-       id: 4,
+       
         district: "ಬಿದರ",
         districtEn: "udupi",
       photos: [],
@@ -116,7 +116,7 @@ export const newsData = [
       date: "17-01-2024"
     },
     {
-       id: 5,
+       
         district: "ಬಿಜಾಪುರ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300"],
@@ -124,7 +124,7 @@ export const newsData = [
       headlines: "ಬೆಂಗಳೂರು ನಗರದಲ್ಲಿ ಹೊಸ ಮೇಟ್ರೋ ನಿಲ್ದಾಣಗಳ ಉದ್ಘಾಟನೆ",
       title:'inauguration-of-new-metro-stations-in-bengaluru-city',
       author: "David Wilson",
-      views: 1234,
+     views : 1234,
        metaTags: {
       "title": "ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಕೃಷಿ ಮತ್ತು ಕೃಷಿಕರ ಸಂಘಟನೆಗಳ ಬಗ್ಗೆ ವಿಶೇಷ ವರದಿ",
       "description": "ಬಳ್ಳಾರಿ ಜಿಲ್ಲೆಯಲ್ಲಿ ನಡೆದ ಕ್ರೀಡಾ ಪ್ರತಿಯೋಗಿತೆಗಳ ಬಗ್ಗೆ ವಿವರವಾದ ಮಾಹಿತಿಯನ್ನು ಈ ಲೇಖನದಲ್ಲಿ ನೀಡಲಾಗಿದೆ. ಈ ಪ್ರತಿಯೋಗಿತೆಗಳು ಕ್ರೀಡಾ ಪ್ರೇಮಿಗಳಿಗೆ ಅನೇಕ ರಸಗೊಳಿಸುವ ಅನುಭವಗಳನ್ನು ನೀಡಿವೆ.",
@@ -145,7 +145,7 @@ export const newsData = [
       date: "20-01-2024"
     },
     {
-       id: 6,
+       
         district: "ದಾವಣಗೆರೆ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -174,7 +174,7 @@ export const newsData = [
       date: "25-01-2024"
     },
     {
-       id: 7,
+       
         district: "ಧಾರವಾಡ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -203,7 +203,7 @@ export const newsData = [
       date: "28-01-2024"
     },
     {
-        id: 8,
+        
          district: "Bagalkot",
          districtEn: "udupi",
        photos: [],
@@ -232,7 +232,7 @@ export const newsData = [
        date: "10-01-2024"
      },
      {
-        id: 9,
+        
          district: "ಹಾವೆರಿ",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -261,7 +261,7 @@ export const newsData = [
        date: "12-01-2024"
      },
      {
-        id: 10,
+        
          district: "ಹೊಸಪೇಟೆ",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -290,7 +290,7 @@ export const newsData = [
        date: "15-01-2024"
      },
      {
-        id: 11,
+        
          district: "ಗುಲ್ಬರ್ಗ",
          districtEn: "udupi",
        photos: [],
@@ -319,7 +319,7 @@ export const newsData = [
        date: "17-01-2024"
      },
      {
-        id: 12,
+        
          district: "ಹೊಸಪೇಟೆ",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300"],
@@ -348,7 +348,7 @@ export const newsData = [
        date: "20-01-2024"
      },
      {
-        id: 13,
+        
          district: "ಕಲಬುರಗಿ",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -377,7 +377,7 @@ export const newsData = [
        date: "25-01-2024"
      },
      {
-        id: 14,
+        
          district: "ಮಂಗಳೂರು",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -406,7 +406,7 @@ export const newsData = [
        date: "28-01-2024"
      },
      {
-        id: 15,
+        
          district: "ರಾಯಚೂರು",
          districtEn: "udupi",
        photos: [],
@@ -435,7 +435,7 @@ export const newsData = [
        date: "30-01-2024"
      },
      {
-        id: 16,
+        
          district: "ಶಿಮೋಗಾ",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -464,7 +464,7 @@ export const newsData = [
        date: "05-02-2024"
      },
      {
-        id: 17,
+        
          district: "ಸಿರ್ಸಿ",
          districtEn: "udupi",
        photos: ["https://via.placeholder.com/300"],
@@ -493,7 +493,7 @@ export const newsData = [
        date: "10-02-2024"
      },
     {
-       id: 18,
+       
         district: "ತುಮಕೂರು",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -522,7 +522,7 @@ export const newsData = [
       date: "05-02-2024"
     },
     {
-       id: 19,
+       
         district: "ಯಾದಗಿರಿ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300"],
@@ -551,7 +551,7 @@ export const newsData = [
       date: "10-02-2024"
     },
     {
-       id: 20,
+       
         district: "ಉತ್ತರ ಕನ್ನಡ",
         districtEn: "udupi",
       photos: [],
@@ -580,7 +580,7 @@ export const newsData = [
       date: "15-02-2024"
     },
     {
-       id: 21,
+       
         district: "ವಿಜಯಪುರ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -609,7 +609,7 @@ export const newsData = [
       date: "20-02-2024"
     },
     {
-       id: 22,
+       
         district: "ಕೊಡಗು",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -638,7 +638,7 @@ export const newsData = [
       date: "25-02-2024"
     },
     {
-       id: 23,
+       
         district: "ಮಂಗಳೂರು",
         districtEn: "udupi",
       photos: [],
@@ -667,7 +667,7 @@ export const newsData = [
       date: "28-02-2024"
     },
     {
-       id: 24,
+       
         district: "ಹಾವೆರಿ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -696,7 +696,7 @@ export const newsData = [
       date: "03-03-2024"
     },
     {
-       id: 25,
+       
         district: "ಹಾವೆರಿ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300"],
@@ -725,7 +725,7 @@ export const newsData = [
       date: "08-03-2024"
     },
     {
-       id: 26,
+       
         district: "ದಾವಣಗೆರೆ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -754,7 +754,7 @@ export const newsData = [
       date: "12-03-2024"
     },
     {
-       id: 27,
+       
         district: "ದಾವಣಗೆರೆ",
         districtEn: "udupi",
       photos: [],
@@ -783,7 +783,7 @@ export const newsData = [
       date: "15-03-2024"
     },
     {
-       id: 28,
+       
         district: "ದಾವಣಗೆರೆ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -812,7 +812,7 @@ export const newsData = [
       date: "18-03-2024"
     },
     {
-       id: 29,
+       
         district: "ದಾವಣಗೆರೆ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300"],
@@ -841,7 +841,7 @@ export const newsData = [
       date: "22-03-2024"
     },
     {
-       id: 30,
+       
         district: "ರಾಯಚೂರು",
         districtEn: "udupi",
       photos: [],
@@ -870,7 +870,7 @@ export const newsData = [
       date: "25-03-2024"
     },
     {
-       id: 31,
+       
         district: "ರಾಯಚೂರು",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -899,7 +899,7 @@ export const newsData = [
       date: "30-03-2024"
     },
     {
-       id: 32,
+       
         district: "ಕೊಡಗು",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -928,7 +928,7 @@ export const newsData = [
       date: "03-04-2024"
     },
     {
-       id: 33,
+       
         district: "ಕೊಡಗು",
         districtEn: "udupi",
       photos: [],
@@ -957,7 +957,7 @@ export const newsData = [
       date: "07-04-2024"
     },
     {
-       id: 34,
+       
         district: "ಕೊಡಗು",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -986,7 +986,7 @@ export const newsData = [
       date: "10-04-2024"
     },
     {
-       id: 35,
+       
         district: "ಕೊಪ್ಪಳ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300"],
@@ -1015,7 +1015,7 @@ export const newsData = [
       date: "14-04-2024"
     },
     {
-       id: 36 ,
+       
         district: "ಕೊಪ್ಪಳ",
         districtEn: "udupi",
       photos: [],
@@ -1044,7 +1044,7 @@ export const newsData = [
       date: "18-04-2024"
     },
     {
-       id: 37,
+       
         district: "ಕೊಪ್ಪಳ",
         districtEn: "udupi",
       photos: ["https://via.placeholder.com/300", "https://via.placeholder.com/300", "https://via.placeholder.com/300"],
@@ -1073,7 +1073,7 @@ export const newsData = [
       date: "22-04-2024"
     },
     {
-       id: 38,
+       
       district: "ಕೊಪ್ಪಳ",
       districtEn: "udupi",
       photos: ["https://via.placeholder.com/300"],
@@ -1102,7 +1102,7 @@ export const newsData = [
       date: "25-04-2024"
     },
     {
-       id: 39,
+       
         district: "ಕೊಪ್ಪಳ",
         districtEn: "udupi",
       photos: [],

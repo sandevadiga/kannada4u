@@ -1,8 +1,29 @@
-import { newsData } from '../../data/NewsData';
+import { newsData  } from '../../data/NewsData';
 import Link from 'next/link'; // Import Link from Next.js
 
-const HomePage = () => {
-  const sortedNews = newsData.sort((a, b) => b.views - a.views);
+const getdata = async (district) => {
+  // const response = await fetch('https://kannada4u.com/api/news' , { next: { revalidate:1 } });
+  const response = await fetch(`http://localhost:3000/api/news/${district}`, {
+    method: 'GET',
+    headers: {
+      district : district
+    }},  { cache: 'no-store' });
+    // console.log(response);
+  const data = await response.json();
+  return data;
+};
+ 
+
+const HomePage = async ({params}) => {
+
+  const district = params.state;
+  console.log(params)
+  console.log("this state  a neww news")
+
+  const article = await getdata(district);
+  
+  // console.log(article)
+  const sortedNews = article.sort((a, b) => b.views - a.views);
 
   const categoryColors = {
     'breaking news': 'bg-red-500 text-white',
@@ -38,11 +59,7 @@ const HomePage = () => {
           {sortedNews.map((article, index) => (
             <div key={index} className="bg-white dark:bg-gray-700 p-4 rounded shadow-md">
               <Link
-                href={{
-                  pathname: `/news/${article.district}/id=${article.id}/`,
-                  query: { id: index + 1, headline: article.headlines.split(' ').slice(0, 4).join('-') }
-                }}
-                passHref
+               href={`/news/${article.districtEn}/${article.title}&id=${'il565dlEZCLnJii9XhXG'}`}
               >
                 {/* Pass the article ID and headline to create a SEO-friendly URL */}
                 
@@ -58,8 +75,7 @@ const HomePage = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{article.article.substring(0, 100)}...</p>
                   <p className="text-gray-500 dark:text-gray-400">District: {article.district}</p>
                   <p className="text-gray-500 dark:text-gray-400">Author: {article.author}</p>
-                  <p className="text-gray-500 dark:text-gray-400">Views: {article.views}</p>
-                
+                  <p className="text-gray-500 dark:text-gray-400">Views: {article.views}</p> 
               </Link>
             </div>
           ))}

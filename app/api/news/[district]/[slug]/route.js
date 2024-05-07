@@ -1,15 +1,19 @@
-import db from '../../config/firebaseAdmin'; // adjust the path as needed
+import db from '../../../../config/firebaseAdmin'
 
 
 export const GET = async (req,res) => {
-  
+
+
+  // const BlogID = 'il565dlEZCLnJii9XhXG'; 
+  const BlogID = req.headers.get('BlogID')
+
   if (req.method === 'GET') {
-    console.log("this main news")
-    const  news=[];
-    const snapshot = await db.collection('dailynews').get();
-    snapshot.forEach((doc) => {
-      news.push({ id: doc.id, ...doc.data() });
-    });
+
+
+    const docRef = db.collection('dailynews').doc(BlogID);
+    const docSnap = await docRef.get();
+    const news = docSnap.data(); 
+
     return new Response(JSON.stringify(news), { status: 200 })
   } else {
     // Handle any other HTTP method
