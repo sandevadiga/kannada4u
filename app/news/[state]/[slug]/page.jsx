@@ -38,7 +38,7 @@ const ArticlePage = async ({ params }) => {
   const article = await getdata(docID, distric,baseURL);
   article.date = timestampToDate(article.date);
 
-  const suggestedArticles = await getSuggestedArticles(distric);
+  const suggestedArticles = await getSuggestedArticles(distric,baseURL);
 
   console.log(article)
   console.log(suggestedArticles)
