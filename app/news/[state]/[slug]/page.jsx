@@ -8,6 +8,8 @@ const getdata = async (docID, distric,baseURL) => {
   return data;
 };
 
+//  check 
+
 const getSuggestedArticles = async (state,baseURL) => {
   const response = await fetch(`${baseURL}/api/news/${state}`, {
     method: 'GET',
