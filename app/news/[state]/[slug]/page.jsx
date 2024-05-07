@@ -1,5 +1,5 @@
-const getdata = async (docID, distric) => {
-  const response = await fetch(`http://localhost:3000/api/news/${distric}/${docID}`, {
+const getdata = async (docID, distric,baseURL) => {
+  const response = await fetch(`${baseURL}/api/news/${distric}/${docID}`, {
     method: 'GET',
     headers: {
       BlogID : docID
@@ -8,8 +8,8 @@ const getdata = async (docID, distric) => {
   return data;
 };
 
-const getSuggestedArticles = async (state) => {
-  const response = await fetch(`http://localhost:3000/api/news/${state}`, {
+const getSuggestedArticles = async (state,baseURL) => {
+  const response = await fetch(`${baseURL}/api/news/${state}`, {
     method: 'GET',
   }, { cache: 'no-store' });
   const data = await response.json();
@@ -19,7 +19,11 @@ const getSuggestedArticles = async (state) => {
 const timestampToDate = (timestamp) => {
   return timestamp;
 };
+
 const ArticlePage = async ({ params }) => {
+
+  const baseURL =process.env.BASE_URL; 
+
   const docID = getID(params.slug);
   const distric = params.state;
 
@@ -29,7 +33,7 @@ const ArticlePage = async ({ params }) => {
     return parts[2];
   }
 
-  const article = await getdata(docID, distric);
+  const article = await getdata(docID, distric,baseURL);
   article.date = timestampToDate(article.date);
 
   const suggestedArticles = await getSuggestedArticles(distric);

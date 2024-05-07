@@ -3,9 +3,9 @@ import Link from 'next/link'; // Import Link from Next.js
 import React from 'react';
 
 
-const getdata = async () => {
+const getdata = async (baseURL) => {
   // const response = await fetch('https://kannada4u.com/api/news' , { next: { revalidate:1 } });
-  const response = await fetch('http://localhost:3000/api/news',  { cache: 'no-store' });
+  const response = await fetch(`${baseURL}/api/news`,  { cache: 'no-store' });
   const data = await response.json();
   return data;
 };
@@ -13,7 +13,9 @@ const getdata = async () => {
 
 const HomePage = async () => {
 
-  const newsDatas = await getdata();
+  const baseURL =process.env.BASE_URL;
+
+  const newsDatas = await getdata(baseURL);
 
   const sortedNews = newsDatas.sort((a, b) => b.views - a.views);
 

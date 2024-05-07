@@ -6,6 +6,8 @@ import Link from 'next/link'; // Import Link from Next.js
 const HomePage = () => {
   const sortedNews = newsData.sort((a, b) => b.views - a.views);
 
+  const baseURL =process.env.BASE_URL;
+
   console.log('this newspage')
 
   const categoryColors = {

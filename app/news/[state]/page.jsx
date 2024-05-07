@@ -1,9 +1,9 @@
 import { newsData  } from '../../data/NewsData';
 import Link from 'next/link'; // Import Link from Next.js
 
-const getdata = async (district) => {
+const getdata = async (district,baseURL) => {
   // const response = await fetch('https://kannada4u.com/api/news' , { next: { revalidate:1 } });
-  const response = await fetch(`http://localhost:3000/api/news/${district}`, {
+  const response = await fetch(`${baseURL}/api/news/${district}`, {
     method: 'GET',
     headers: {
       district : district
@@ -16,11 +16,14 @@ const getdata = async (district) => {
 
 const HomePage = async ({params}) => {
 
+  const baseURL =process.env.BASE_URL;
+
+
   const district = params.state;
   console.log(params)
   console.log("this state  a neww news")
 
-  const article = await getdata(district);
+  const article = await getdata(district,baseURL);
   
   // console.log(article)
   const sortedNews = article.sort((a, b) => b.views - a.views);
