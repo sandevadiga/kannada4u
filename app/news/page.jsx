@@ -58,10 +58,6 @@ const HomePage = async () => {
 
                 <span className={`inline-block px-2 py-1 mb-2 rounded ${getCategoryTagColor(article.category)}`}>
                   {article.category}
-                  {article.districtEn}
-                  {article.title}
-                  {article.id}
-
                 </span>
                 {article.photos.length > 0 && (
                   <div className="mb-4">

@@ -56,20 +56,18 @@ const HomePage = async () => {
                 href={`/news/${article.districtEn}/${article.title}&id=${article.id}`}
                 passHref
               >
-
                 <span className={`inline-block px-2 py-1 mb-2 rounded ${getCategoryTagColor(article.category)}`}>
                   {article.category}
-                  {article.districtEn}
-                  {article.title}
-                  {article.id}
-
                 </span>
                 {article.photos.length > 0 && (
                   <div className="mb-4">
                     <img src={article.photos[0]} alt="News" className="w-full h-48 object-cover rounded" />
+                    <span className={`inline-block px-2 py-1 mb-2 rounded ${getCategoryTagColor(article.category)}`}>
+                  {article.headline}
+                </span>
                   </div>
                 )}
-                <h3 className="text-lg font-semibold mb-2">{article.headlines}</h3>
+                <h3 className="text-lg font-semibold mb-2">{article.headline}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{article.article.substring(0, 100)}...</p>
                 <p className="text-gray-500 dark:text-gray-400">District: {article.district}</p>
                 <p className="text-gray-500 dark:text-gray-400">Author: {article.author}</p>

@@ -41,7 +41,7 @@ function Footer() {
                             <Link href="/advertize-with-us" className="hover:underline me-4 md:me-6">Advertise with Us
                             </Link>
                         </li>
-
+                        <a  href="https://icons8.com/icon/80981/share">Share</a> icon by <a href="https://icons8.com">Icons8</a>
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
