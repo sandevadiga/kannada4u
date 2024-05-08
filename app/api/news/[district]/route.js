@@ -2,12 +2,9 @@ import db from '../../../config/firebaseAdmin'
 
 
 export const GET = async (req,res) => {
-  const BlogID = 'il565dlEZCLnJii9XhXG'; 
 
 
   const district = req.headers.get('district');
-  
-
 
 const KarnatakaDistricts = {
   "Bagalkot": "ಬಾಗಲಕೋಟೆ",
@@ -41,7 +38,7 @@ const KarnatakaDistricts = {
   "Chikkaballapura": "ಚಿಕ್ಕಬಳ್ಳಾಪುರ"
 };
  
-const kannadadistrict = KarnatakaDistricts[district];
+const kannadadistrict = KarnatakaDistricts[district] || 'ಉಡುಪಿ';
 
   if (req.method === 'GET') {
 

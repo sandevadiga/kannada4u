@@ -4,7 +4,7 @@ import db from '../../config/firebaseAdmin'; // adjust the path as needed
 export const GET = async (req,res) => {
   
   if (req.method === 'GET') {
-    console.log("this main news")
+    // console.log("this main news")
     const  news=[];
     const snapshot = await db.collection('dailynews').get();
     snapshot.forEach((doc) => {

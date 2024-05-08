@@ -1,14 +1,21 @@
-import { newsData ,allData } from '../data/NewsData';
 import Link from 'next/link'; // Import Link from Next.js
+import React from 'react';
 
 
+const getdata = async (baseURL) => {
+  const response = await fetch(`${baseURL}/api/news`,  { cache: 'no-store' });
+  const data = await response.json();
+  return data;
+};
 
-const HomePage = () => {
-  const sortedNews = newsData.sort((a, b) => b.views - a.views);
+
+const HomePage = async () => {
 
   const baseURL =process.env.BASE_URL;
 
-  console.log('this newspage')
+  const newsDatas = await getdata(baseURL);
+
+  const sortedNews = newsDatas.sort((a, b) => b.views - a.views);
 
   const categoryColors = {
     'breaking news': 'bg-red-500 text-white',
@@ -31,6 +38,7 @@ const HomePage = () => {
     'art': 'bg-yellow-600 text-black',
   };
 
+
   const getCategoryTagColor = (category) => {
     const colorClass = categoryColors[category] || 'bg-gray-500 text-white';
     return `inline-block px-2 py-1 mb-2 rounded ${colorClass}`;
@@ -44,29 +52,28 @@ const HomePage = () => {
           {sortedNews.map((article, index) => (
             <div key={index} className="bg-white dark:bg-gray-700 p-4 rounded shadow-md">
               <Link
-                href={{
-                  pathname: `/news/id=${article.id}`,
-                  // pathname: `/news/`,
-                  query: { id: index + 1, headline: article.headlines.split(' ').slice(0, 4).join('-') }
-                }}
+                href={`/news/${article.districtEn}/${article.title}&id=${article.id}`}
                 passHref
               >
-                {/* Pass the article ID and headline to create a SEO-friendly URL */}
-                
-                  <span className={`inline-block px-2 py-1 mb-2 rounded ${getCategoryTagColor(article.category)}`}>
-                    {article.category}
-                  </span>
-                  {article.photos.length > 0 && (
-                    <div className="mb-4">
-                      <img src={article.photos[0]} alt="News" className="w-full h-48 object-cover rounded" />
-                    </div>
-                  )}
-                  <h3 className="text-lg font-semibold mb-2">{article.headlines}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">{article.article.substring(0, 100)}...</p>
-                  <p className="text-gray-500 dark:text-gray-400">District: {article.district}</p>
-                  <p className="text-gray-500 dark:text-gray-400">Author: {article.author}</p>
-                  <p className="text-gray-500 dark:text-gray-400">Views: {article.views}</p>
-                
+
+                <span className={`inline-block px-2 py-1 mb-2 rounded ${getCategoryTagColor(article.category)}`}>
+                  {article.category}
+                  {article.districtEn}
+                  {article.title}
+                  {article.id}
+
+                </span>
+                {article.photos.length > 0 && (
+                  <div className="mb-4">
+                    <img src={article.photos[0]} alt="News" className="w-full h-48 object-cover rounded" />
+                  </div>
+                )}
+                <h3 className="text-lg font-semibold mb-2">{article.headlines}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{article.article.substring(0, 100)}...</p>
+                <p className="text-gray-500 dark:text-gray-400">District: {article.district}</p>
+                <p className="text-gray-500 dark:text-gray-400">Author: {article.author}</p>
+                <p className="text-gray-500 dark:text-gray-400">Views: {article.views}</p>
+
               </Link>
             </div>
           ))}

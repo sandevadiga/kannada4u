@@ -8,7 +8,7 @@ const getdata = async (district,baseURL) => {
     headers: {
       district : district
     }},  { cache: 'no-store' });
-    // console.log(response);
+
   const data = await response.json();
   return data;
 };
@@ -18,14 +18,12 @@ const HomePage = async ({params}) => {
 
   const baseURL =process.env.BASE_URL;
 
-
-  const district = params.state;
+  const district = params.district;
   console.log(params)
   console.log("this state  a neww news")
 
   const article = await getdata(district,baseURL);
   
-  // console.log(article)
   const sortedNews = article.sort((a, b) => b.views - a.views);
 
   const categoryColors = {

@@ -4,7 +4,6 @@ import React from 'react';
 
 
 const getdata = async (baseURL) => {
-  // const response = await fetch('https://kannada4u.com/api/news' , { next: { revalidate:1 } });
   const response = await fetch(`${baseURL}/api/news`,  { cache: 'no-store' });
   const data = await response.json();
   return data;
