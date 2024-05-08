@@ -73,7 +73,7 @@ const ArticlePage = async ({ params }) => {
   <span className="text-gray-500">|</span>
   <span className="text-gray-500 ml-2">{article.date}</span>
   <span className="text-gray-500">|</span>
-  <ShareButtonWhatsApp url='https://www.kannada4u.com/news/udupi/new-plans-for-electricity-shortage-solution-in-karnataka-state&id=il565dlEZCLnJii9XhXG' style="ml-auto w-7" />
+  <ShareButtonWhatsApp url= {`https://www.kannada4u.com/news/${article.districtEn}/${article.title}&id=${docID}`} style="ml-auto w-7" />
 </div>
 
           <div className="relative h-48 justify-center flex center">
