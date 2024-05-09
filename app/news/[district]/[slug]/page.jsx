@@ -2,29 +2,64 @@
 // import ShareButtonFacebook from '../../../components/Buttons/ShareButtonFacebook'
 import ShareButtonWhatsApp from '../../../components/Buttons/ShareButtonWhatsApp'
 
-const getdata = async (docID, district, baseURL) => {
-  const response = await fetch(`${baseURL}/api/news/${district}/${docID}`, {
-    method: 'GET',
-    headers: {
-      BlogID: docID
-    }
-  }, { cache: 'no-store' });
-  const data = await response.json();
-  return data;
-};
 
+const getData = async (docID, district, baseURL) => {
+  try {
+    const response = await fetch(`${baseURL}/api/news/${district}/${docID}`, {
+      method: 'GET',
+      headers: {
+        BlogID: docID
+      },
+      cache: 'no-store'
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data with status code: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    // console.error('Error fetching data:', error.message);
+    throw error; // Propagate the error to the caller
+  }
+};
 
 const getSuggestedArticles = async (district, baseURL) => {
-  const response = await fetch(`${baseURL}/api/news/${district}`, {
-    method: 'GET',
-    headers: {
-      district: district
-    }
-  }, { cache: 'no-store' });
+  try {
+    const response = await fetch(`${baseURL}/api/news/${district}`, {
+      method: 'GET',
+      headers: {
+        district: district
+      },
+      cache: 'no-store'
+    });
 
-  const data = await response.json();
-  return data;
+    if (!response.ok) {
+      throw new Error(`Failed to fetch suggested articles with status code: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching suggested articles:', error.message);
+    // throw error; // Propagate the error to the caller
+  }
 };
+
+
+
+// const getSuggestedArticles = async (district, baseURL) => {
+//   const response = await fetch(`${baseURL}/api/news/${district}`, {
+//     method: 'GET',
+//     headers: {
+//       district: district
+//     }
+//   }, { cache: 'no-store' });
+
+//   const data = await response.json();
+//   return data;
+// };
 
 
 const timestampToDate = (timestamp) => {
@@ -52,13 +87,15 @@ const ArticlePage = async ({ params }) => {
     return parts[2];
   }
 
-  const article = await getdata(docID, district, baseURL);
-  article.date = timestampToDate(article.date);
+  const article = await getData(docID, district, baseURL);
+  
+  if(article){
+    article.date = timestampToDate(article.date);
+  }
+
 
   const suggestedArticles = await getSuggestedArticles(district, baseURL);
 
-  console.log(article)
-  console.log(suggestedArticles)
 
   return (
     <div className=" relative container mx-auto px-4 py-2 dark:bg-gray-800 dark:text-white">
