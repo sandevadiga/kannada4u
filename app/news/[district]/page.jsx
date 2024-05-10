@@ -1,4 +1,4 @@
-import { newsData } from '../../data/NewsData';
+
 import Link from 'next/link'; // Import Link from Next.js
 
 const getdata = async (district, baseURL) => {

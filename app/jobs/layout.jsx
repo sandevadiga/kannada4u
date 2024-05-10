@@ -3,14 +3,14 @@ import { Metadata } from 'next';
  
 export const metadata = {
     title: {
-      template: '%s | Kannada4u News',
-      default: 'Kannada4U.com',
+      template: '%s |  ಕನ್ನಡ ಸುದ್ದಿ | Karnataka News : ಕರ್ನಾಟಕ ಸುದ್ದಿ, Latest News in Karnataka | Kannada4u.com' ,
+      default: 'ಕನ್ನಡ ಸುದ್ದಿ | Karnataka News : ಕರ್ನಾಟಕ ಸುದ್ದಿ, Latest News in Karnataka | Kannada4u.com',
     },
      keywords: [
-      'udupi',
-      'ujire',
-      'kannada news',
-      'local news ',
+      'jobs in bidar      ',
+      'jobs in vijayapur',
+      'jobs in chitradurga',
+      'jobs in davanagere',
       'hubbali',
       'hassan',
       'Karwarwa',
@@ -21,7 +21,7 @@ export const metadata = {
       'shivamogga',
       'belagavi'
     ],
-    description: "Karantaka's fastest news website ",
+    description:"ಕನ್ನಡ4U.com | Kannada4U.com - ಕನ್ನಡದ ಅತ್ಯುತ್ತಮ ನ್ಯೂಸ್ portal. Daily job updates, Daily Gold Price updates, travel guides ಮತ್ತು ಸ್ಥಳೀಯ ಸುದ್ದಿಗೆ ವಿಶೇಷ ಗಮನ. Fast and accurate ಸುದ್ದಿಗೆ ಪ್ರವೇಶಿಸಿ."
   };
   
 

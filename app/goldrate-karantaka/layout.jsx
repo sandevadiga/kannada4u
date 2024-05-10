@@ -1,5 +1,4 @@
 import React from 'react'
-import { Metadata } from 'next';
  
 export const metadata = {
     title: {
@@ -7,9 +6,9 @@ export const metadata = {
       default: 'Kannada4U.com',
     },
      keywords: [
-      'udupi',
-      'ujire',
-      'kannada news',
+      'today gold rate in bidar',
+      'gold rate today in bidar',
+      'bidar gold rate',
       'local news ',
       'hubbali',
       'hassan',
