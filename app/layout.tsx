@@ -26,8 +26,29 @@ export const metadata:Metadata = {
     'davanagere news',
   ],
   description:"ಕನ್ನಡ4U.com | Kannada4U.com - ಕನ್ನಡದ ಅತ್ಯುತ್ತಮ ನ್ಯೂಸ್ portal. Daily job updates, Daily Gold Price updates, travel guides ಮತ್ತು ಸ್ಥಳೀಯ ಸುದ್ದಿಗೆ ವಿಶೇಷ ಗಮನ. Fast and accurate ಸುದ್ದಿಗೆ ಪ್ರವೇಶಿಸಿ.",
+  // openGraph: {
+  //   images: '/opengraph-image.png',
+  // },
   openGraph: {
-    images: '/opengraph-image.png',
+    // title: 'Next.js',
+    // description: 'The React Framework for the Web',
+    url: 'https://kannada4u.com',
+    // siteName: 'Next.js',
+    images: [
+      {
+        url: './opengraph-image.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: '/opengraph-image.png',
+        width: 1800,
+        height: 1600,
+        alt: 'kannada4u.com',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
 };
 

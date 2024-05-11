@@ -6,7 +6,6 @@ export const metadata  ={
 export default function AdvertiseWithUs() {
   return (
     <div className="bg-white text-gray-600 font-sans leading-normal tracking-normal">
-
       <div className="container mx-auto flex flex-wrap py-6">
         <div className="w-full md:w-2/3 flex flex-col px-3">
           <h1 className="font-bold text-3xl mb-6">Advertise with Us</h1>
